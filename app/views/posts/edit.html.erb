@@ -1,0 +1,19 @@
+<h1>Edit Student Name</h1>
+<%= form_for @post do |f| %>
+<%= form_for @post do |f| %>
+<% if @post.errors.any? %>
+<h2>Errors:</h2>
+<ul>
+<% @post.errors.full_messages.each do |message| %>
+<li><%= messages %></li>
+<% end %>
+</ul>
+<% end %>
+	<p>
+	<%= f.label :title %><br/>
+	<%= f.text_field :title %>
+	</p>
+		
+	<%= f.submit "Update Post" %>
+	</p>
+	<% end %>
